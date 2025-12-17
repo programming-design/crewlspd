@@ -189,3 +189,9 @@ if ('serviceWorker' in navigator && 'Notification' in window) {
     })
 }
 
+firebase.firestore().collection('subscribers').doc(token).set({
+  token: token,
+  userAgent: navigator.userAgent,
+  createdAt: firebase.firestore.FieldValue.serverTimestamp()
+})
+
