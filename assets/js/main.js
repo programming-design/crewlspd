@@ -157,7 +157,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
 /* ===== FIREBASE PUSH NOTIFICATIONS ===== */
 
 if ('serviceWorker' in navigator && 'Notification' in window) {
@@ -184,14 +183,18 @@ if ('serviceWorker' in navigator && 'Notification' in window) {
           serviceWorkerRegistration: registration
         }).then(token => {
           console.log('FCM TOKEN:', token)
+
+          firebase.firestore()
+  .collection('subscribers')
+  .doc(token)
+  .set({
+    token: token,
+    userAgent: navigator.userAgent,
+    createdAt: firebase.firestore.FieldValue.serverTimestamp()
+  })
         })
       })
     })
 }
 
-firebase.firestore().collection('subscribers').doc(token).set({
-  token: token,
-  userAgent: navigator.userAgent,
-  createdAt: firebase.firestore.FieldValue.serverTimestamp()
-})
 
