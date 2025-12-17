@@ -154,3 +154,44 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 })
+
+
+
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"
+import { getMessaging, getToken, onMessage } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-messaging.js"
+
+const firebaseConfig = {
+ apiKey: "AIzaSyB3rdUHyZzobsUy_ELpvoQpEyH2oQrhNDc",
+  authDomain: "crewlspd-b7e98.firebaseapp.com",
+  projectId: "crewlspd-b7e98",
+  messagingSenderId: "78627836390",
+  appId: "1:78627836390:web:891eae30b3b20e86bec627"
+}
+
+const app = initializeApp(firebaseConfig)
+const messaging = getMessaging(app)
+
+// تسجيل Service Worker
+const registration = await navigator.serviceWorker.register('/firebase-messaging-sw.js')
+
+// طلب الإذن
+const permission = await Notification.requestPermission()
+if (permission !== 'granted') return alert('Notification denied')
+
+// الحصول على Token
+const token = await getToken(messaging, {
+  vapidKey: 'BBRSLrNiVMea0c-EM5bhCjEUeFlcoDpmMvmCAGj22dyz9GSXYtxo4nj3UINj8yqYDXRJ6jSv_4nBduxc0reT9dE',
+  serviceWorkerRegistration: registration
+})
+
+console.log('FCM Token:', token)
+
+// إشعار أثناء فتح الموقع
+onMessage(messaging, payload => {
+  new Notification(payload.notification.title, {
+    body: payload.notification.body,
+    icon: '/assets/img/logo.png'
+  })
+})
+
