@@ -1,3 +1,18 @@
+# ===============================
+# 🤖 CrewLSPD Robots.txt
+# Author: CrewLSPD Team
+# Updated: 2025
+# ===============================
+
 User-agent: *
 Allow: /
-Sitemap: https://crewlspd.vercel.app/sitemap.xml
+
+# Prevent indexing of temporary or private files
+Disallow: /admin/
+Disallow: /temp/
+Disallow: /private/
+Disallow: /assets/dev/
+
+# Sitemap (with and without www)
+Sitemap: https://www.crewlspd.online/sitemap.xml
+Sitemap: https://crewlspd.online/sitemap.xml

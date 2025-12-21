@@ -1,7 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home -->
   <url>
-    <loc>https://crewlspd.vercel.app/</loc>
+    <loc>https://www.crewlspd.online/</loc>
     <priority>1.00</priority>
   </url>
+  <url>
+    <loc>https://crewlspd.online/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- Event Pages -->
+  <url>
+    <loc>https://www.crewlspd.online/assets/event/Event%20Boxville.html</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://crewlspd.online/assets/event/Event%20Boxville.html</loc>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.crewlspd.online/assets/event/Event%20Stand%20your%20yacht.html</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://crewlspd.online/assets/event/Event%20Stand%20your%20yacht.html</loc>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.crewlspd.online/assets/event/Event%20the%20bullet%20train.html</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://crewlspd.online/assets/event/Event%20the%20bullet%20train.html</loc>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.crewlspd.online/assets/event/Event%20Rocket%20League.html</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://crewlspd.online/assets/event/Event%20Rocket%20League.html</loc>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.crewlspd.online/assets/event/Event%20the%20sumo%20event.html</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://crewlspd.online/assets/event/Event%20the%20sumo%20event.html</loc>
+    <priority>0.85</priority>
+  </url>
+
 </urlset>
