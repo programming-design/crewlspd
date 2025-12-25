@@ -1,18 +1,37 @@
-# ===============================
-# 🤖 CrewLSPD Robots.txt
+# ==========================================
+# 🤖 CrewLSPD Advanced Robots.txt
 # Author: CrewLSPD Team
 # Updated: 2025
-# ===============================
+# ==========================================
 
 User-agent: *
 Allow: /
 
-# Prevent indexing of temporary or private files
+# Allow image indexing (Google Images, Bing, etc.)
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Disallow sensitive or temporary directories
 Disallow: /admin/
 Disallow: /temp/
 Disallow: /private/
 Disallow: /assets/dev/
+Disallow: /test/
 
 # Sitemap (with and without www)
 Sitemap: https://www.crewlspd.online/sitemap.xml
 Sitemap: https://crewlspd.online/sitemap.xml
+
+# Extra crawl-delay for Bing (to reduce server load)
+User-agent: Bingbot
+Crawl-delay: 5
+
+# ==============================
+# Comments:
+# - This configuration allows full site indexing
+# - It improves visibility of images and events
+# - Duplicate sitemaps ensure both domains are covered
+# ==============================
