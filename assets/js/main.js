@@ -163,8 +163,8 @@ if ('serviceWorker' in navigator && 'Notification' in window) {
 
   const firebaseConfig = {
     apiKey: "AIzaSyB3rdUHyZzobsUy_ELpvoQpEyH2oQrhNDc",
-  authDomain: "crewlspd-b7e98.firebaseapp.com",
-  projectId: "crewlspd-b7e98",
+  authDomain: "crewV-BRO-b7e98.firebaseapp.com",
+  projectId: "crewV-BRO-b7e98",
   messagingSenderId: "78627836390",
   appId: "1:78627836390:web:891eae30b3b20e86bec627"
   }

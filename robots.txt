@@ -1,6 +1,6 @@
 # ==========================================
-# 🤖 CrewLSPD Advanced Robots.txt
-# Author: CrewLSPD Team
+# 🤖 CrewV-BRO Advanced Robots.txt
+# Author: CrewV-BRO Team
 # Updated: 2025
 # ==========================================
 
@@ -22,8 +22,8 @@ Disallow: /assets/dev/
 Disallow: /test/
 
 # Sitemap (with and without www)
-Sitemap: https://www.crewlspd.online/sitemap.xml
-Sitemap: https://crewlspd.online/sitemap.xml
+Sitemap: https://www.crewV-BRO.online/sitemap.xml
+Sitemap: https://crewV-BRO.online/sitemap.xml
 
 # Extra crawl-delay for Bing (to reduce server load)
 User-agent: Bingbot
